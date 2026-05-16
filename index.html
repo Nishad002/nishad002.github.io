@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ========================= -->
+    <!-- BASIC WEBSITE SETTINGS -->
+    <!-- ========================= -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nishad's Anime Shelf</title>
+
+    <!-- ========================= -->
+    <!-- GOOGLE FONT -->
+    <!-- ========================= -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- ========================= -->
+    <!-- REMIX ICONS -->
+    <!-- ========================= -->
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!-- ========================= -->
+    <!-- CSS FILE -->
+    <!-- ========================= -->
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="top"></div>
+
+    <!-- ====================================================== -->
+    <!-- BACKGROUND PARTICLES -->
+    <!-- This will be animated using CSS + JavaScript -->
+    <!-- ====================================================== -->
+
+    <div class="background-glow"></div>
+    <div class="stars-container"></div>
+
+    <!-- ====================================================== -->
+    <!-- NAVIGATION BAR -->
+    <!-- ====================================================== -->
+
+    <header class="navbar">
+
+        <!-- WEBSITE LOGO / NAME -->
+
+        <a href="#top" class="logo">
+            Nishad's Anime<br>
+            Shelf
+        </a>
+
+        <!-- SIMPLE NAVIGATION -->
+
+        <nav class="nav-menu">
+
+            <a href="#movies-section">
+                Movies
+            </a>
+
+            <a href="#series-section">
+                Series
+            </a>
+
+        </nav>
+
+    </header>
+
+    <!-- ====================================================== -->
+    <!-- HERO SECTION -->
+    <!-- ====================================================== -->
+
+    <section class="hero-section">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <h1>
+                Nishad's Anime Shelf
+            </h1>
+
+            <p>
+                Stories that stayed with me.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- ====================================================== -->
+    <!-- MAIN CONTENT -->
+    <!-- ====================================================== -->
+
+    <main class="main-content">
+
+        <!-- ================================================== -->
+        <!-- MOVIES COMPLETED -->
+        <!-- ================================================== -->
+
+        <section id="movies-section" class="anime-section">
+
+            <div class="section-header">
+
+                <h2>
+                    🍿 Anime Movies
+                </h2>
+
+                <div class="anime-count" id="movies-count">
+                    0
+                </div>
+
+            </div>
+
+            <!-- Anime cards will be inserted automatically here -->
+
+            <div class="anime-grid" id="movies-completed-grid"></div>
+
+        </section>
+
+        <!-- ================================================== -->
+        <!-- SERIES COMPLETED -->
+        <!-- ================================================== -->
+
+        <section id="series-section" class="anime-section">
+
+            <div class="section-header">
+
+                <h2>
+                    ⛩️ Anime Series
+                </h2>
+
+                <div class="anime-count" id="series-count">
+                    0
+                </div>
+
+            </div>
+
+            <!-- Anime cards will be inserted automatically here -->
+
+            <div class="anime-grid" id="series-completed-grid"></div>
+
+        </section>
+
+    </main>
+
+    <!-- ====================================================== -->
+    <!-- POPUP MODAL -->
+    <!-- This appears when clicking an anime card -->
+    <!-- ====================================================== -->
+
+    <div class="modal-overlay" id="anime-modal">
+
+        <div class="modal-card">
+
+            <!-- CLOSE BUTTON -->
+
+            <button class="close-modal-btn" id="close-modal">
+                <i class="ri-close-line"></i>
+            </button>
+
+            <!-- MODAL IMAGE -->
+
+            <div class="modal-image-container">
+
+                <img id="modal-image" src="" alt="Anime Poster">
+
+            </div>
+
+            <!-- MODAL CONTENT -->
+
+            <div class="modal-content">
+
+                <h2 id="modal-title">
+                    Anime Title
+                </h2>
+
+                <!-- MAL BUTTON -->
+
+                <a id="modal-link" href="#" target="_blank">
+
+                    <button class="mal-button">
+
+                        More Info on MyAnimeList
+
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ====================================================== -->
+    <!-- FOOTER -->
+    <!-- ====================================================== -->
+    
+    <footer class="footer">
+
+        <p>
+            Wanna suggest me some more anime?
+        </p>
+
+        <p> Email me at: <a href="mailto:youremail@gmail.com">
+            youremail@gmail.com
+        </a>
+        </p>
+    </footer>
+
+    <!-- ====================================================== -->
+    <!-- JAVASCRIPT FILES -->
+    <!-- IMPORTANT:
+         anime-data.js MUST load BEFORE script.js
+    -->
+    <!-- ====================================================== -->
+
+    <script src="anime-data.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

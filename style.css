@@ -1,0 +1,729 @@
+/* ========================================================= */
+/* RESET + GLOBAL SETTINGS */
+/* ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #050816;
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* ========================================================= */
+/* CUSTOM SCROLLBAR */
+/* ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #070b1d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        to bottom,
+        #5f5fff,
+        #9f5fff
+    );
+    border-radius: 10px;
+}
+
+/* ========================================================= */
+/* BACKGROUND GLOW */
+/* ========================================================= */
+
+.background-glow {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+
+    background:
+        radial-gradient(circle at top left,
+            rgba(100, 100, 255, 0.15),
+            transparent 30%),
+
+        radial-gradient(circle at bottom right,
+            rgba(180, 100, 255, 0.15),
+            transparent 30%),
+
+        #050816;
+}
+
+/* ========================================================= */
+/* STARS BACKGROUND */
+/* ========================================================= */
+
+.stars-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+
+    opacity: 0.7;
+
+    animation: twinkle linear infinite;
+}
+
+@keyframes twinkle {
+
+    0% {
+        opacity: 0.2;
+        transform: translateY(0px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: translateY(-20px);
+    }
+}
+
+/* ========================================================= */
+/* NAVBAR */
+/* ========================================================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    z-index: 1000;
+
+    backdrop-filter: blur(18px);
+
+    background: rgba(5, 8, 22, 0.55);
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ========================================================= */
+/* LOGO */
+/* ========================================================= */
+
+.logo {
+
+    text-decoration: none;
+
+    font-size: 1.05rem;
+
+    font-weight: 600;
+
+    line-height: 1.25;
+
+    letter-spacing: 1px;
+
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(140, 120, 255, 0.6);
+}
+
+/* ========================================================= */
+/* NAV MENU */
+/* ========================================================= */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #b08cff;
+}
+
+/* ========================================================= */
+/* DROPDOWN */
+/* ========================================================= */
+
+.dropdown-content a:hover {
+    background: rgba(140, 120, 255, 0.12);
+
+    padding-left: 24px;
+}
+
+/* ========================================================= */
+/* HERO SECTION */
+/* ========================================================= */
+
+.hero-section {
+    position: relative;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+}
+
+/* ========================================================= */
+/* HERO OVERLAY */
+/* ========================================================= */
+
+.hero-overlay {
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(5, 8, 22, 0.2),
+            rgba(5, 8, 22, 0.8)
+        );
+
+    z-index: 1;
+}
+
+/* ========================================================= */
+/* HERO CONTENT */
+/* ========================================================= */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+
+    text-shadow:
+        0 0 25px rgba(130, 110, 255, 0.6);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #c9c9ff;
+
+    letter-spacing: 1px;
+}
+
+/* ========================================================= */
+/* MAIN CONTENT */
+/* ========================================================= */
+
+.main-content {
+    width: 100%;
+    padding: 60px 8%;
+}
+
+/* ========================================================= */
+/* ANIME SECTION */
+/* ========================================================= */
+
+.anime-section {
+    margin-bottom: 100px;
+}
+
+/* ========================================================= */
+/* SECTION HEADER */
+/* ========================================================= */
+
+.section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    font-weight: 600;
+
+    color: white;
+
+    text-shadow:
+        0 0 18px rgba(140, 120, 255, 0.25);
+}
+
+/* ========================================================= */
+/* ANIME COUNT */
+/* ========================================================= */
+
+.anime-count {
+
+    min-width: 65px;
+    height: 42px;
+
+    padding: 0 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 14px;
+
+    background:
+        rgba(120, 100, 255, 0.12);
+
+    border:
+        1px solid rgba(180, 160, 255, 0.22);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: #d7d0ff;
+
+    box-shadow:
+        0 0 18px rgba(120, 100, 255, 0.12);
+}
+
+/* ========================================================= */
+/* ANIME GRID */
+/* ========================================================= */
+
+.anime-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fill, minmax(220px, 1fr));
+
+    gap: 28px;
+}
+
+/* ========================================================= */
+/* ANIME CARD */
+/* ========================================================= */
+
+.anime-card {
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 24px;
+
+    cursor: pointer;
+
+    background:
+        rgba(255, 255, 255, 0.04);
+
+    backdrop-filter: blur(10px);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    transition: 0.35s ease;
+}
+
+/* ========================================================= */
+/* CARD HOVER EFFECT */
+/* ========================================================= */
+
+.anime-card:hover {
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    box-shadow:
+        0 0 30px rgba(120, 100, 255, 0.35);
+}
+
+/* ========================================================= */
+/* CARD IMAGE */
+/* ========================================================= */
+
+.anime-card img {
+    width: 100%;
+    height: 320px;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: 0.4s ease;
+}
+
+.anime-card:hover img {
+    transform: scale(1.06);
+}
+
+/* ========================================================= */
+/* CARD OVERLAY */
+/* ========================================================= */
+
+.card-overlay {
+    position: absolute;
+
+    bottom: 0;
+    width: 100%;
+
+    padding: 18px;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.9),
+            transparent
+        );
+}
+
+/* ========================================================= */
+/* CARD TITLE */
+/* ========================================================= */
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 500;
+
+    line-height: 1.4;
+}
+
+/* ========================================================= */
+/* MODAL OVERLAY */
+/* ========================================================= */
+
+.modal-overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background:
+        rgba(0, 0, 0, 0.65);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 2000;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+}
+
+/* ========================================================= */
+/* ACTIVE MODAL */
+/* ========================================================= */
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* ========================================================= */
+/* MODAL CARD */
+/* ========================================================= */
+
+.modal-card {
+    position: relative;
+
+    width: 90%;
+    max-width: 850px;
+
+    display: flex;
+    gap: 35px;
+
+    padding: 30px;
+
+    border-radius: 28px;
+
+    background:
+        rgba(10, 14, 32, 0.95);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
+
+    backdrop-filter: blur(25px);
+
+    transform:
+        translateY(30px);
+
+    transition: 0.3s;
+}
+
+.modal-overlay.active .modal-card {
+    transform: translateY(0px);
+}
+
+/* ========================================================= */
+/* CLOSE BUTTON */
+/* ========================================================= */
+
+.close-modal-btn {
+    position: absolute;
+
+    top: 18px;
+    right: 18px;
+
+    width: 42px;
+    height: 42px;
+
+    border: none;
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.08);
+
+    color: white;
+
+    font-size: 1.3rem;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.close-modal-btn:hover {
+    background:
+        rgba(160, 120, 255, 0.25);
+
+    transform: rotate(90deg);
+}
+
+/* ========================================================= */
+/* MODAL IMAGE */
+/* ========================================================= */
+
+.modal-image-container img {
+    width: 260px;
+    height: 390px;
+
+    object-fit: cover;
+
+    border-radius: 18px;
+}
+
+/* ========================================================= */
+/* MODAL CONTENT */
+/* ========================================================= */
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 18px;
+}
+
+.modal-content p {
+    color: #d7d7ff;
+
+    line-height: 1.8;
+
+    margin-bottom: 30px;
+}
+
+/* ========================================================= */
+/* MAL BUTTON */
+/* ========================================================= */
+
+.mal-button {
+    padding: 14px 28px;
+
+    border: none;
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #5f5fff,
+            #9f5fff
+        );
+
+    color: white;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.mal-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 0 20px rgba(120, 100, 255, 0.45);
+}
+
+/* ========================================================= */
+/* FOOTER */
+/* ========================================================= */
+
+.footer {
+    padding: 50px 20px;
+
+    text-align: center;
+
+    color: #9ea5d8;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: #b08cff;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.footer a:hover {
+    color: white;
+
+    text-shadow:
+        0 0 10px rgba(176, 140, 255, 0.6);
+}
+
+/* ========================================================= */
+/* RESPONSIVE DESIGN */
+/* ========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .modal-card {
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+
+        padding: 28px 22px;
+    }
+
+    .modal-image-container img {
+        width: 220px;
+        height: 330px;
+    }
+}
+
+    @media (max-width: 650px) {
+
+    .navbar {
+        align-items: center;
+    }
+
+    .logo {
+        max-width: 140px;
+    }
+
+    .nav-menu {
+        align-items: center;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .nav-menu {
+        gap: 15px;
+    }
+
+    .dropdown-btn {
+        font-size: 0.9rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .anime-grid {
+        grid-template-columns:
+            repeat(auto-fill, minmax(160px, 1fr));
+
+        gap: 18px;
+    }
+
+    .anime-card img {
+        height: 250px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .modal-content p {
+        font-size: 0.95rem;
+    }
+}
+
+section {
+    scroll-margin-top: 90px;
+}
