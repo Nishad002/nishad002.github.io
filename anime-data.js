@@ -590,6 +590,14 @@ const animeList = [
         },
 
         {
+            title: "The Strongest Magician in Demon Lord's Army was a Human",
+            type: "series",
+            status: "completed",
+            image: "images/the-strongest-magician-in-demon-lord's-army-was-a-human.webp",
+            link: "https://myanimelist.net/anime/57876/Maougun_Saikyou_no_Majutsushi_wa_Ningen_datta"
+        },
+
+        {
             title: "In Another World with My Smartphone",
             type: "series",
             status: "completed",
@@ -605,6 +613,14 @@ const animeList = [
             link: "https://myanimelist.net/anime/50932/Saikyou_Onmyouji_no_Isekai_Tenseiki"
         },
 
+        {
+            title: "I Was Reincarnated As The 7th Prince",
+            type: "series",
+            status: "completed",
+            image: "images/i-was-reincarnated-as-the-7th-prince.webp",
+            link: "https://myanimelist.net/anime/53516/Tensei_shitara_Dainana_Ouji_Datta_node_Kimama_ni_Majutsu_wo_Kiwamemasu"
+        },
+        
         {
             title: "Wise Man's Grandchild",
             type: "series",
@@ -627,6 +643,14 @@ const animeList = [
             status: "completed",
             image: "images/the-wrong-way-to-use-healing-magic.webp",
             link: "https://myanimelist.net/anime/49613/Chiyu_Mahou_no_Machigatta_Tsukaikata"
+        },
+
+        {
+            title: "The Brilliant Healer's New Life in the Shadows",
+            type: "series",
+            status: "completed",
+            image: "images/the-brilliant-healer's-new-life-in-the-shadows.webp",
+            link: "https://myanimelist.net/anime/58359/Isshun_de_Chiryou_shiteita_noni_Yakutatazu_to_Tsuihou_sareta_Tensai_Chiyushi_Yami_Healer_toshite_Tanoshiku_Ikiru"
         },
 
         {
@@ -659,6 +683,14 @@ const animeList = [
             status: "completed",
             image: "images/lookism.webp",
             link: "https://myanimelist.net/anime/53149/Lookism"
+        },
+
+        {
+            title: "Ninja Kamui",
+            type: "series",
+            status: "completed",
+            image: "images/ninja-kamui.webp",
+            link: "https://myanimelist.net/anime/56285/Ninja_Kamui"
         },
 
 
